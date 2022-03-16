@@ -34,4 +34,4 @@ def sentiment_predict(new_sentence):
     else:
         print("{:.2f}% 확률로 부정 문장입니다.".format((1 - score) * 100))
 
-sentiment_predict("아씨발 넌 왜 그렇게 생겼냐")
+sentiment_predict("수고하셨습니다. 즐거운 일입니다. 마치 외계기술 같군요.")
