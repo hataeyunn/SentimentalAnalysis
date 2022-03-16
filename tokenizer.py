@@ -1,3 +1,5 @@
+import pickle
+
 from processing import processing
 import pandas as pd
 import numpy as np
@@ -44,4 +46,7 @@ def token():
 
     X_train = pad_sequences(X_train, maxlen=max_len)
     X_test = pad_sequences(X_test, maxlen=max_len)
+    with open('token.p','wb') as file:
+        pickle.dump(tokenizer,file)
+
     return (X_train,y_train,X_test,y_test,vocab_size)
